@@ -1,0 +1,39 @@
+/* Прячем все картинки и показываем только активную */
+.carousel img {
+    display: none;
+}
+
+.carousel img.active {
+    display: block;
+}
+
+.slide-2{
+
+}
+
+.slide-3{
+
+}
+
+
+.slide-1{
+
+}
+
+
+.container_main_slide{
+    height:498px ;
+    width: 338px; ;
+    overflow: hidden;
+}
+
+.container_Discrybe_slide{
+    height:498px ;
+    width: 338px; ;
+    overflow: hidden;
+}
+
+
+.main_cantain{
+    display: flex;
+}
