@@ -1,39 +1,48 @@
-/* Прячем все картинки и показываем только активную */
+/* ===== Показ картинок ===== */
+
+/* По умолчанию все картинки в карусели скрыты */
 .carousel img {
     display: none;
 }
 
+/* Показываем только картинку с классом active */
 .carousel img.active {
     display: block;
 }
 
-.slide-2{
+/* ===== Размеры двух половинок карусели ===== */
 
+/* Левая половина: картинка */
+.container_main_slide {
+    height: 498px;
+    width: 338px;
+    overflow: hidden;   /* обрезаем всё, что не помещается */
 }
 
-.slide-3{
-
-}
-
-
-.slide-1{
-
-}
-
-
-.container_main_slide{
-    height:498px ;
-    width: 338px; ;
+/* Правая половина: описание */
+.container_Discrybe_slide {
+    height: 498px;
+    width: 338px;
     overflow: hidden;
 }
 
-.container_Discrybe_slide{
-    height:498px ;
-    width: 338px; ;
-    overflow: hidden;
-}
+/* ===== Общий контейнер трёх каруселей ===== */
 
-
-.main_cantain{
+/* Карусели стоят в ряд по горизонтали */
+.main_cantain {
     display: flex;
+}
+
+
+.carousel{
+    display: flex;
+    overflow: hidden;
+}
+
+/* ===== Кнопки под каждой каруселью ===== */
+
+.buttons {
+    display: flex;
+    justify-content: space-between;  /* «Назад» слева, «Вперёд» справа */
+    padding: 10px;
 }

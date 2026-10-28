@@ -1,18 +1,28 @@
-// Все картинки карусели
-const imgs = document.querySelectorAll('.carousel img');
-const next = document.querySelector('.next');
-const prev = document.querySelector('.prev');
+// Находим все карусели на странице (их три)
+const carousels = document.querySelectorAll('.carousel');
 
-// Индекс текущей картинки
-let i = 0;
+// Обрабатываем каждую карусель отдельно
+carousels.forEach(function (carousel) {
+  // Картинки только внутри этой карусели
+  const imgs = carousel.querySelectorAll('img');
 
-// Показать картинку с номером n
-function show(n) {
-  imgs[i].classList.remove('active');   // прячем текущую
-  i = (n + imgs.length) % imgs.length;  // новый индекс, по кругу: 3 -> 0, -1 -> 2
-  imgs[i].classList.add('active');      // показываем новую
-}
+  // Кнопки только внутри этой карусели
+  const nextBtn = carousel.querySelector('.next');
+  const prevBtn = carousel.querySelector('.prev');
 
-// Кнопки
-next.onclick = () => show(i + 1);
-prev.onclick = () => show(i - 1);
+  // Индекс текущей картинки в этой карусели (0 — первая)
+  let index = 0;
+
+  // Показать картинку с номером n
+  function show(n) {
+    imgs[index].classList.remove('active');              // прячем текущую картинку
+    index = (n + imgs.length) % imgs.length;             // новый индекс; по кругу: 2 -> 0, -1 -> 1
+    imgs[index].classList.add('active');                 // показываем новую картинку
+  }
+
+  // Кнопка «Вперёд» — следующая картинка
+  nextBtn.addEventListener('click', () => show(index + 1));
+
+  // Кнопка «Назад» — предыдущая картинка
+  prevBtn.addEventListener('click', () => show(index - 1));
+});

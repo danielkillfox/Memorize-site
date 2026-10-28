@@ -3,54 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <title>Карусель</title>
+    <!-- Подключаем стили -->
     <link rel="stylesheet" href="style.css">
+    <!-- Подключаем скрипт; defer — выполнить после загрузки HTML -->
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Аудио-файл (без controls, поэтому не видно плеера) -->
     <audio src="EllektraJazz - Nocturne in Blue.mp3" preload="auto"></audio>
-    <header>
-    </header>
+
+    <header></header>
+
     <main class="main_cantain">
+
+        <!-- ===== Карусель 1: кошка ===== -->
         <div class="carousel">
-        <div class="container_main_slide">
-            <img src="cat.png" class="slide-1 active" alt="1">
-        </div>
-        <div class="container_Discrybe_slide">
-            <img src="Cat icom.png" class="slide-2" alt="2">
-            <h1>My first pet</h1>
-            <p>Tyt kakoyto tekst</p>
-        </div>
-    </div>
+            <!-- Левая часть: первая картинка -->
+            <div class="container_main_slide">
+                <img src="cat.png" class="slide-1 active" alt="1">
+            </div>
 
+            <!-- Правая часть: вторая картинка, заголовок и текст -->
+            <div class="container_Discrybe_slide">
+                <img src="Cat icom.png" class="slide-2" alt="2">
+                <h1>My first pet</h1>
+                <p>Tyt kakoyto tekst</p>
+            </div>
 
-    <div class="carousel">
-        <div class="container_main_slide">
-            <img src="Minecraft.png" class="slide-1 active" alt="1">
+            <!-- Кнопки только для этой карусели -->
+            <div class="buttons">
+                <button class="prev">Назад</button>
+                <button class="next">Вперёд</button>
+            </div>
         </div>
-        <div class="container_Discrybe_slide">
-            <img src="minecraft-icon.png" class="slide-2" alt="2">
-            <h1>My first game</h1>
-            <p>tyt kakoyto tekst</p>
-        </div>
-    </div>
-    
-    <div class="carousel">
-        <div class="container_main_slide">
-            <img src="school.png" class="slide-1 active" alt="1"> 
-        </div>
-        <div class="container_Discrybe_slide">
-            <img src="School icon.png" class="slide-2" alt="2">
-            <h1>My favorite school</h1>
-            <p>tyt kakoyto tekst</p>
-        </div>
-    </div>
 
-    <button class="prev">Назад</button>
-    <button class="next">Вперёд</button>
+        <!-- ===== Карусель 2: игра ===== -->
+        <div class="carousel">
+            <div class="container_main_slide">
+                <img src="Minecraft.png" class="slide-1 active" alt="1">
+            </div>
+
+            <div class="container_Discrybe_slide">
+                <img src="minecraft-icon.png" class="slide-2" alt="2">
+                <h1>My first game</h1>
+                <p>tyt kakoyto tekst</p>
+            </div>
+
+            <div class="buttons">
+                <button class="prev">Назад</button>
+                <button class="next">Вперёд</button>
+            </div>
+        </div>
+
+        <!-- ===== Карусель 3: школа ===== -->
+        <div class="carousel">
+            <div class="container_main_slide">
+                <img src="school.png" class="slide-1 active" alt="1">
+            </div>
+
+            <div class="container_Discrybe_slide">
+                <img src="School icon.png" class="slide-2" alt="2">
+                <h1>My favorite school</h1>
+                <p>tyt kakoyto tekst</p>
+            </div>
+
+            <div class="buttons">
+                <button class="prev">Назад</button>
+                <button class="next">Вперёд</button>
+            </div>
+        </div>
+
     </main>
-    <footer>
 
-    </footer>
-
+    <footer></footer>
 </body>
 </html>
