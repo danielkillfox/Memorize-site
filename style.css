@@ -30,19 +30,30 @@
 
 /* Карусели стоят в ряд по горизонтали */
 .main_cantain {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
 
 
-.carousel{
+.carousel {
     display: flex;
     overflow: hidden;
+    width: 500px;
+    height: 500px;
+}
+
+
+.carousel_1 {
+    grid-row:1 ;
+    grid-column:1 ;
 }
 
 /* ===== Кнопки под каждой каруселью ===== */
 
 .buttons {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;  /* «Назад» слева, «Вперёд» справа */
     padding: 10px;
 }
