@@ -1,59 +1,71 @@
-/* ===== Показ картинок ===== */
-
-/* По умолчанию все картинки в карусели скрыты */
-.carousel img {
-    display: none;
+/* ===== Ряд из трёх карточек ===== */
+.main_cantain {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 40px;
 }
 
-/* Показываем только картинку с классом active */
+/* ===== Карточка ===== */
+.carousel {
+    width: 320px;
+    box-sizing: border-box;
+    background: burlywood;
+    border: 2px solid #333;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ===== Картинка карусели ===== */
+.slide {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* По умолчанию все картинки скрыты */
+.carousel img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Показываем только активную */
 .carousel img.active {
     display: block;
 }
 
-/* ===== Размеры двух половинок карусели ===== */
-
-/* Левая половина: картинка */
-.container_main_slide {
-    height: 498px;
-    width: 338px;
-    overflow: hidden;   /* обрезаем всё, что не помещается */
+/* ===== Текст ===== */
+.info h1 {
+    font-size: 20px;
+    margin: 0 0 6px;
 }
 
-/* Правая половина: описание */
-.container_Discrybe_slide {
-    height: 498px;
-    width: 338px;
-    overflow: hidden;
+.info p {
+    margin: 0;
+    font-size: 15px;
 }
 
-/* ===== Общий контейнер трёх каруселей ===== */
-
-/* Карусели стоят в ряд по горизонтали */
-.main_cantain {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
-
-.carousel {
-    display: flex;
-    overflow: hidden;
-    width: 500px;
-    height: 500px;
-}
-
-
-.carousel_1 {
-    grid-row:1 ;
-    grid-column:1 ;
-}
-
-/* ===== Кнопки под каждой каруселью ===== */
-
+/* ===== Две кнопки под карточкой ===== */
 .buttons {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;  /* «Назад» слева, «Вперёд» справа */
-    padding: 10px;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.buttons button {
+    flex: 1;
+    padding: 8px;
+    cursor: pointer;
+    background-color:lightskyblue;
+}
+
+body{
+    background-color: bisque;
 }
