@@ -1,28 +1,40 @@
 <!DOCTYPE html>
+<!-- Тип документа: HTML5 -->
 <html lang="ru">
 <head>
+    <!-- Кодировка страницы (поддержка кириллицы) -->
     <meta charset="UTF-8">
+    <!-- Заголовок вкладки браузера -->
     <title>Карусель</title>
+    <!-- Подключение стилей -->
     <link rel="stylesheet" href="style.css">
+    <!-- Подключение скрипта; defer = выполняется после загрузки HTML -->
     <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Аудиоплеер (без controls): управление через кнопку в правом верхнем углу -->
+    <!-- id нужен, чтобы JS нашёл этот элемент -->
     <audio id="bg-audio" src="audio/EllektraJazz - Nocturne in Blue.mp3" preload="auto"></audio>
 
+    <!-- Шапка сайта (пока пустая) -->
     <header></header>
 
+    <!-- Контейнер всех карточек: flex-ряд, перенос на новую строку при нехватке места -->
     <main class="main_cantain">
 
         <!-- ===== Карточка 1: кошка ===== -->
         <div class="carousel carousel_1">
+            <!-- Блок картинок: показывается только та, у которой есть класс active -->
             <div class="slide">
                 <img src="cat.png" class="active" alt="1">
                 <img src="Cat icom.png" alt="2">
             </div>
+            <!-- Текст карточки -->
             <div class="info">
                 <h1>My first pet</h1>
                 <p>Tyt kakoyto tekst</p>
             </div>
+            <!-- Кнопки переключения картинок -->
             <div class="buttons">
                 <button class="prev">Назад</button>
                 <button class="next">Вперёд</button>
@@ -111,8 +123,10 @@
 
     </main>
 
+    <!-- Подвал (пока пустой) -->
     <footer></footer>
 
+    <!-- Кнопка управления аудио: фиксирована в правом верхнем углу (см. CSS) -->
     <button id="audio-toggle" class="audio-btn" type="button">▶ Воспроизвести</button>
 </body>
 </html>

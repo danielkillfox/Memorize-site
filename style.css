@@ -1,30 +1,47 @@
-/* ===== Ряд из трёх карточек ===== */
+/* ===== Ряд из карточек (контейнер) ===== */
 .main_cantain {
+    /* Флекс-контейнер: карточки в ряд */
     display: flex;
+    /* Выравнивание по центру по горизонтали */
     justify-content: center;
+    /* Выравнивание по верху по вертикали */
     align-items: flex-start;
+    /* Отступ между карточками */
     gap: 40px;
+    /* Перенос на новую строку, если не помещается */
     flex-wrap: wrap;
+    /* Внутренний отступ контейнера */
     padding: 40px;
 }
 
-/* ===== Карточка ===== */
+/* ===== Одна карточка ===== */
 .carousel {
+    /* Фиксированная ширина карточки */
     width: 320px;
+    /* padding не увеличивает ширину */
     box-sizing: border-box;
+    /* Фон карточки */
     background: burlywood;
+    /* Рамка */
     border: 2px solid #333;
+    /* Скругление углов */
     border-radius: 12px;
+    /* Внутренний отступ */
     padding: 12px;
+    /* Внутри карточки элементы идут колонкой */
     display: flex;
     flex-direction: column;
+    /* Отступ между блоками внутри карточки */
     gap: 10px;
 }
 
-/* ===== Картинка карусели ===== */
+/* ===== Область картинки карусели ===== */
 .slide {
+    /* Фиксированная высота области картинки */
     height: 300px;
+    /* Лишнее обрезается */
     overflow: hidden;
+    /* Скругление */
     border-radius: 8px;
 }
 
@@ -33,15 +50,16 @@
     display: none;
     width: 100%;
     height: 100%;
+    /* Картинка заполняет область, обрезаясь по краям */
     object-fit: cover;
 }
 
-/* Показываем только активную */
+/* Показываем только активную картинку (у неё есть класс active) */
 .carousel img.active {
     display: block;
 }
 
-/* ===== Текст ===== */
+/* ===== Текст карточки ===== */
 .info h1 {
     font-size: 20px;
     margin: 0 0 6px;
@@ -60,21 +78,25 @@
 }
 
 .buttons button {
+    /* Кнопки делят ширину поровну */
     flex: 1;
     padding: 8px;
     cursor: pointer;
-    background-color:lightskyblue;
+    background-color: lightskyblue;
 }
 
-body{
+/* ===== Фон страницы ===== */
+body {
     background-color: bisque;
 }
 
 /* ===== Кнопка аудио (правый верхний угол) ===== */
 .audio-btn {
+    /* Фиксирована относительно окна: не двигает другие элементы */
     position: fixed;
     top: 12px;
     right: 12px;
+    /* Поверх остального контента */
     z-index: 1000;
     padding: 8px 12px;
     cursor: pointer;
