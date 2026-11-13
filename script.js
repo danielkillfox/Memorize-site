@@ -26,3 +26,24 @@ carousels.forEach(function (carousel) {
   // Кнопка «Назад» — предыдущая картинка
   prevBtn.addEventListener('click', () => show(index - 1));
 });
+
+// ===== Управление аудио: пауза/воспроизведение с того же места =====
+const audio = document.getElementById('bg-audio');
+const audioBtn = document.getElementById('audio-toggle');
+
+if (audio && audioBtn) {
+  audioBtn.addEventListener('click', function () {
+    if (audio.paused) {
+      audio.play();
+      audioBtn.textContent = '⏸ Пауза';
+    } else {
+      audio.pause();
+      audioBtn.textContent = '▶ Воспроизвести';
+    }
+  });
+
+  // Если трек доиграл до конца — вернуть кнопку в исходное состояние
+  audio.addEventListener('ended', function () {
+    audioBtn.textContent = '▶ Воспроизвести';
+  });
+}
